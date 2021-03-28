@@ -1,0 +1,137 @@
+/*BOOR para variáveis======================*/
+:root{
+    --vermelho: #E50914;
+    --preto: #141414;
+}
+/*reset CSS================================*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*conteúdo não ultrapassar a borda da caixa*/
+}
+
+/*corpo (body)==========================*/
+body{
+    background: var(--preto);
+    font-family: 'Arial', Times, serif;
+    color: white;
+}
+
+/*Logo=====================================*/
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+}
+
+/*header==================================*/
+header .container{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+}
+
+
+
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover{
+    color: #fff;
+}
+
+/*filme principal =======================*/
+.filme-principal {
+    font-size: 20px;
+    background: linear-gradient(rgba(0,0,0,.80),rgba(0,0,0,.50)100%), url('/img/capa-ultimato.jpg');
+
+
+    height: 400px;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao {
+    margin-top: 15px;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+.titulo {
+    margin-top: 100px;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.botao {
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+
+    padding: 15px 40px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;    
+    transition: .4s ease all;
+}
+
+.botao:hover {
+    background-color: white;
+    color: black;
+}
+
+.container {
+    margin-left: 15px;
+}
+
+
+
+.filme-principal .container {
+    width: 70%;
+}
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
+} 
+
+/*resposividade ==========================*/
+@media screen and (max-width: 700px) {
+    header .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .botao {
+        margin-top: 5px;
+        width: 300px;
+    }
+
+    .filme-principal .descricao {
+        font-size: 15px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+
+    .filme-principal .container {
+        
+        margin-top: 1px;
+        margin-bottom: 110px;
+    }
+}
+
+.carrosel-filmes {
+    margin-top: 5px;
+}
